@@ -30,6 +30,11 @@ public class UserService {
 		return repo.insert(obj);
 	}
 	
+	public void deleteById(String id) {
+		findById(id);
+		repo.deleteById(id);
+	}
+	
 	//Em caso de querer instânciar um User utilizasse o
 	//método fromDTO nessa classe a qual já possui a dependência para o BD
 	
